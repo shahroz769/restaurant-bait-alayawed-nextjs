@@ -1,5 +1,5 @@
 import classes from "@/components/css/popularFoodCardsWrapper.module.css";
-import PopularFoodCard from "@/components/popularFoodCard";
+import PopularFoodCard from "@/components/PopularFoodCard";
 
 export default function PopularFoodCardsWrapper() {
     return (
