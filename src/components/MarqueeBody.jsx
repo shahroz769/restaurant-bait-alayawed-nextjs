@@ -15,6 +15,7 @@ export default function MarqueeBody() {
                     width={0}
                     height={0}
                     quality={75}
+                    placeholder="blur"
                 />
             </li>
             <li className={classes.pizza}>
@@ -26,6 +27,7 @@ export default function MarqueeBody() {
                     width={0}
                     height={0}
                     quality={75}
+                    placeholder="blur"
                 />
             </li>
         </ul>

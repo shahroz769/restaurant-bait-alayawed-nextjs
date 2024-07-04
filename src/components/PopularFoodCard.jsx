@@ -16,6 +16,7 @@ export default function PopularFoodCard() {
                     width={0}
                     height={0}
                     quality={75}
+                    placeholder="blur"
                 />
             </div>
             <div className={classes.popularFoodCardBody}>

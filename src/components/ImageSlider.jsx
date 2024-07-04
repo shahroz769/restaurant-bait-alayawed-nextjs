@@ -46,7 +46,7 @@ export default function ImageSlideshow() {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentImageIndex((prevIndex) =>
-                prevIndex < slides.length - 1 ? prevIndex + 1 : 0,
+                prevIndex < slides.length - 1 ? prevIndex + 1 : 0
             );
         }, 5000);
 
@@ -64,6 +64,7 @@ export default function ImageSlideshow() {
                             index === currentImageIndex ? styles.active : ""
                         }
                         alt={slide.alt}
+                        placeholder="blur"
                         priority
                     />
                 ))}
