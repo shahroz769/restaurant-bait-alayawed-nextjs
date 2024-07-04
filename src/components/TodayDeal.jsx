@@ -21,7 +21,6 @@ export default function todayDeal() {
                 height={0}
                 width={0}
                 quality={75}
-                placeholder="blur"
             />
             <Image
                 className={classes.saveUpto}
@@ -30,7 +29,6 @@ export default function todayDeal() {
                 height={0}
                 width={0}
                 quality={75}
-                placeholder="blur"
             />
             <Image
                 className={classes.tomato}
@@ -39,7 +37,6 @@ export default function todayDeal() {
                 height={0}
                 width={0}
                 quality={75}
-                placeholder="blur"
             />
             <div className={classes.todayDealSubContainer}>
                 <div className={classes.todayDealLeft}>
@@ -63,7 +60,6 @@ export default function todayDeal() {
                         height={0}
                         width={0}
                         quality={75}
-                        placeholder="blur"
                     />
                     <Image
                         className={classes.grilledImage}
@@ -72,7 +68,6 @@ export default function todayDeal() {
                         height={0}
                         width={0}
                         quality={75}
-                        placeholder="blur"
                     />
                     <Image
                         className={classes.spicyImg}
@@ -81,7 +76,6 @@ export default function todayDeal() {
                         height={0}
                         width={0}
                         quality={75}
-                        placeholder="blur"
                     />
                 </div>
             </div>

@@ -18,7 +18,6 @@ function DishCard({ dish, index }) {
                         alt={dish.image.alt}
                         width={0}
                         height={150}
-                        placeholder="blur"
                     />
                     <div className={classes.emblaDishLine}></div>
                     <h2
