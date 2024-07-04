@@ -64,6 +64,7 @@ export default function ImageSlideshow() {
                             index === currentImageIndex ? styles.active : ""
                         }
                         alt={slide.alt}
+                        quality={75}
                         placeholder="blur"
                         priority
                     />
