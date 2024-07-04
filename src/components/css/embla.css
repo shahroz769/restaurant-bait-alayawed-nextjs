@@ -1,0 +1,17 @@
+.embla {
+    max-width: var(--max-width);
+    width: 100%;
+}
+
+.embla__viewport {
+    overflow: hidden;
+}
+
+.embla__container {
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: space-between;
+    touch-action: pan-y pinch-zoom;
+    margin: 16px 0;
+    margin-left: calc(18px * -1);
+}

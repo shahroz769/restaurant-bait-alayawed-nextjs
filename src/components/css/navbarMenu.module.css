@@ -1,0 +1,36 @@
+.navMenuDropDownContainer {
+    position: relative;
+}
+
+.navMenuDropDown {
+    z-index: 1000;
+    background-color: var(--clr-white);
+    width: max-content;
+    position: absolute;
+    top: 100%;
+    padding: 48px 28px 18px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.navMenu {
+    color: var(--clr-black);
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.navMenuLink {
+    color: var(--clr-black);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.navMenuLink:hover {
+    opacity: 0.75;
+}
+
+.navMenuLink:active {
+    opacity: 1;
+}

@@ -1,0 +1,30 @@
+.marqueeContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--gap);
+}
+
+.marqueeContent li {
+    display: flex;
+    align-items: baseline;
+    gap: var(--gap);
+}
+
+.marqueeContent .pizza .text {
+    -webkit-text-stroke: 1px var(--clr-red);
+    /* Adjust the stroke width as needed */
+    text-stroke: 1px var(--clr-red);
+}
+
+.marqueeContent .burger .text {
+    -webkit-text-stroke: 1px var(--clr-black);
+    /* Adjust the stroke width as needed */
+    text-stroke: 1px var(--clr-black);
+}
+
+.text {
+    color: transparent;
+    font-size: 130px;
+    white-space: nowrap;
+}

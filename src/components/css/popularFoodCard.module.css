@@ -1,0 +1,55 @@
+.popularFoodCard {
+    background-color: #FFF;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: transform 0.3s ease; /* Smooth transition for the main div */
+}
+
+.popularFoodCard:hover .popularFoodCardImgContainer img {
+    transform: scale(1.1) rotate(5deg); /* Zoom in and tilt the image */
+}
+
+.popularFoodCardImgContainer {
+    width: 100%;
+    overflow: hidden; /* Ensure the image does not overflow its container */
+}
+
+.popularFoodCardImgContainer img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.8);
+    transition: transform 0.3s ease; /* Smooth transition for the image */
+    cursor: pointer;
+}
+
+.popularFoodCardBody {
+    padding: 12px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.popularFoodCardBody h1 {
+    font-size: 32px;
+    color: var(--clr-golden);
+    margin-bottom: 4px;
+}
+
+.popularFoodCardBody p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.popularFoodCardBody .popularFoodCardFooter {
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popularFoodCardBody .popularFoodCardFooter p {
+    color: var(--clr-red);
+    font-size: 20px;
+    font-weight: 500;
+}

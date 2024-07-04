@@ -1,0 +1,34 @@
+.sectionHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+}
+
+
+
+.sectionHeader h3 {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--clr-golden);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+.sectionHeader h3::before,
+.sectionHeader h3::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: var(--clr-golden);
+    display: block;
+    margin: 0 auto;
+}
+
+.sectionHeader h1 {
+    font-size: 48px;
+    font-weight: 400;
+}
