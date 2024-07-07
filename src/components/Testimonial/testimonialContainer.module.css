@@ -1,0 +1,110 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.testimonialContainer {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 500px;
+}
+
+.fastFood {
+    position: absolute;
+    top: 100px;
+    left: 50px;
+}
+
+.corn {
+    position: absolute;
+    top: 0;
+    right: 50px;
+}
+
+.quoteImg {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.quoteImg img {
+    width: 100%;
+    height: 100%;
+}
+
+.testimonial {
+    width: 100%;
+    max-width: calc(var(--max-width) / 2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: calc(var(--gap) * 2);
+    text-align: center;
+}
+
+.testimonial.fadeIn {
+    animation: fadeIn 0.5s forwards;
+}
+
+.testimonial.fadeOut {
+    animation: fadeOut 0.5s forwards;
+}
+
+.testimonial h3 {
+    font-size: 42px;
+    font-weight: 500;
+    color: var(--clr-golden);
+}
+
+.testimonial p {
+    font-size: 20px;
+    color: var(--clr-black);
+}
+
+.testimonialImg {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: filter 1s ease;
+}
+
+.testimonialImgContainer {
+    display: flex;
+    gap: var(--gap);
+}
+
+.testimonialImg img {
+    width: 100%;
+    height: 100%;
+    transition: filter 1s ease;
+}
+
+.testimonialImg.active {
+    filter: grayscale(0);
+}
+
+.testimonialImg.inactive {
+    filter: grayscale(1);
+}

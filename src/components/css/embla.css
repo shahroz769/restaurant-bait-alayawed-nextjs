@@ -12,6 +12,6 @@
     display: flex;
     justify-content: space-between;
     touch-action: pan-y pinch-zoom;
-    margin: 16px 0;
+    /* margin: 16px 0; */
     margin-left: calc(18px * -1);
 }

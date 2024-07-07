@@ -1,0 +1,20 @@
+.feature {
+    border-radius: var(--border-radius);
+    padding: var(--padding);
+    color: var(--clr-white);
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--gap) - 6px);
+}
+
+
+.featureImg {
+    width: max-content;
+    height: 55px;
+}
+
+.featureImg img {
+    width: 100%;
+    height: 100%;
+    filter: invert(1);
+}

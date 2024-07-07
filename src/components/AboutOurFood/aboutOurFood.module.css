@@ -1,0 +1,66 @@
+.aboutOurFood {
+    max-width: var(--max-width);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--gap);
+    color: var(--clr-black);
+}
+
+.aboutOurFoodLeft {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.aboutOurFoodImg {
+    width: 400px;
+}
+
+.aboutOurFoodImg img {
+    width: 100%;
+    height: 100%;
+}
+
+.aboutOurFoodRight {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    flex: 1;
+}
+
+.aboutOurFoodRightHeader h3 {
+    font-size: 22px;
+    color: var(--clr-red);
+}
+
+.aboutOurFoodRightHeader h1 {
+    font-size: 55px;
+    color: var(--clr-black);
+}
+
+.aboutOurFoodRightHeader h1 span {
+    color: var(--clr-red);
+}
+
+.ourQualityWrapper,
+.ourQuality {
+    display: flex;
+    gap: var(--gap);
+}
+
+.aboutOurFoodFooter {
+    display: flex;
+    gap: var(--gap);
+}
+
+.aboutOurFoodFooterBody {
+    font-weight: 600;
+}
+
+.aboutOurFoodFooterBody p:first-child {
+    color: var(--clr-red);
+    margin-bottom: calc(var(--gap) - 12px);
+}

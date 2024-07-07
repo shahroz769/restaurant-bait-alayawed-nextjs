@@ -1,3 +1,21 @@
+@keyframes zoomIn {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.07);
+    }
+}
+
+@keyframes zoomOut {
+    0% {
+        transform: scale(1.07);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 .slideshow {
     width: 100%;
     height: 850px;
@@ -22,12 +40,19 @@
     top: 0;
     left: 0;
     opacity: 0;
-    transition: all 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .imageSlider .active {
     z-index: 1;
-    opacity: 1;
+    opacity: 0.75;
+    animation: zoomIn 10s forwards;
+}
+
+.imageSlider .prevActive {
+    z-index: 0;
+    opacity: 0;
+    animation: zoomOut 1s forwards;
 }
 
 .slideshow .sliderBody {

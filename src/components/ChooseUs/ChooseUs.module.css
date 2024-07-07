@@ -1,0 +1,15 @@
+.ChooseUsContainer {
+    position: relative;
+    max-width: var(--max-width);
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: calc(var(--padding) * 2);
+    border-radius: var(--border-radius);
+    background-color: var(--clr-slider-bg);
+}
+
+.chooseUsBg {
+    position: absolute;
+}

@@ -1,6 +1,7 @@
 import PopularFoodCardsWrapper from "@/components/PopularFoodCardsWrapper";
 import SectionHeader from "@/components/SectionHeader";
 import classes from "@/components/css/popularFoodContainer.module.css";
+import Button from "./Button";
 
 export default function PopularFoodContainer() {
     return (
@@ -10,6 +11,7 @@ export default function PopularFoodContainer() {
                 main="POPULAR FOOD ITEMS"
             />
             <PopularFoodCardsWrapper />
+            <Button backgroundColor="var(--clr-green)">VIEW MORE</Button>
         </div>
     );
 }

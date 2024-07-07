@@ -1,8 +1,4 @@
 .todayDealContainer {
-    background-image: url("../../assets/todayDeal/main-bg.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -11,6 +7,15 @@
     color: var(--clr-white);
     position: relative;
     overflow: hidden;
+}
+
+.todayDealBgImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
 .todayDealContainer .fries {
@@ -23,7 +28,6 @@
     position: absolute;
     bottom: 33%;
     left: 2%;
-    animation: move-up-down 3s ease-in-out infinite alternate;
 }
 
 .todayDealContainer .tomato {
@@ -69,7 +73,10 @@
 
 .todayDealRight {
     position: relative;
-    width: 633px;
+
+}
+
+.grilledImageParent {
     height: 422px;
 }
 
@@ -80,49 +87,13 @@
 
 .todayDealRight .spicyImg {
     position: absolute;
-    top: -20%;
-    right: -30%;
-    -webkit-animation: rotate 15s linear infinite;
-    animation: rotate 15s linear infinite;
+    top: -72px;
+    right: -200px;
 }
 
 .todayDealRight .todaysBestDeal {
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: -120px;
     transform: rotate(30.01deg);
-    animation: rounded 5s linear infinite;
-}
-
-@keyframes rotate {
-    0% {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-
-    100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes rounded {
-    50% {
-        transform: rotate(15deg);
-    }
-}
-
-@keyframes move-up-down {
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-20px);
-        /* adjust this value for desired movement */
-    }
-
-    100% {
-        transform: translateY(0);
-    }
 }

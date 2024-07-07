@@ -13,12 +13,14 @@ function DishCard({ dish, index }) {
         >
             <Link href={dish.href}>
                 <div className={classes.embla__slide__body}>
-                    <Image
-                        src={dish.image.src}
-                        alt={dish.image.alt}
-                        width={0}
-                        height={150}
-                    />
+                    <div className={classes.embla__slide__body__Img}>
+                        <Image
+                            src={dish.image.src}
+                            alt={dish.image.alt}
+                            width={0}
+                            height={150}
+                        />
+                    </div>
                     <div className={classes.emblaDishLine}></div>
                     <h2
                         className={classes.emblaDishName}

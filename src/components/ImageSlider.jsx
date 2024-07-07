@@ -42,16 +42,18 @@ const slides = [
 
 export default function ImageSlideshow() {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [prevImageIndex, setPrevImageIndex] = useState(null);
 
     useEffect(() => {
         const interval = setInterval(() => {
+            setPrevImageIndex(currentImageIndex);
             setCurrentImageIndex((prevIndex) =>
-                prevIndex < slides.length - 1 ? prevIndex + 1 : 0
+                prevIndex < slides.length - 1 ? prevIndex + 1 : 0,
             );
         }, 5000);
 
         return () => clearInterval(interval);
-    }, []);
+    }, [currentImageIndex]);
 
     return (
         <div className={styles.slideshow}>
@@ -61,11 +63,13 @@ export default function ImageSlideshow() {
                         key={index}
                         src={slide.image}
                         className={
-                            index === currentImageIndex ? styles.active : ""
+                            index === currentImageIndex
+                                ? styles.active
+                                : index === prevImageIndex
+                                ? styles.prevActive
+                                : ""
                         }
                         alt={slide.alt}
-                        quality={75}
-                        placeholder="blur"
                         priority
                     />
                 ))}

@@ -8,12 +8,21 @@ import Grilled from "@/assets/todayDeal/grilled.png";
 import TodaysBestDeal from "@/assets/todayDeal/pizza-text-2.png";
 import Spicy from "@/assets/todayDeal/spicy.png";
 import Tomato from "@/assets/todayDeal/tomato-shape-2.png";
+import BackgroundImg from "@/assets/todayDeal/main-bg.jpg";
 
 export default function todayDeal() {
     return (
         <div
             className={`${barlowCondensed.className} ${classes.todayDealContainer}`}
         >
+            <Image
+                className={classes.todayDealBgImg}
+                src={BackgroundImg}
+                alt="background"
+                height={0}
+                width={0}
+                quality={75}
+            />
             <Image
                 className={classes.fries}
                 src={Fries}
@@ -61,14 +70,16 @@ export default function todayDeal() {
                         width={0}
                         quality={75}
                     />
-                    <Image
-                        className={classes.grilledImage}
-                        src={Grilled}
-                        alt="Grilled Chicken"
-                        height={0}
-                        width={0}
-                        quality={75}
-                    />
+                    <div className={classes.grilledImageParent}>
+                        <Image
+                            className={classes.grilledImage}
+                            src={Grilled}
+                            alt="Grilled Chicken"
+                            height={0}
+                            width={0}
+                            quality={75}
+                        />
+                    </div>
                     <Image
                         className={classes.spicyImg}
                         src={Spicy}
