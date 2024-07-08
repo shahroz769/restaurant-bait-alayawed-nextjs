@@ -4,11 +4,11 @@ import { useEffect, useState, useRef } from "react";
 import { gsap } from "gsap";
 import classes from "@/components/css/gsapSlider.module.css";
 
-import Slide1 from "@/assets/gsapSlider/slide1.jpg";
-import Slide2 from "@/assets/gsapSlider/slide2.jpg";
-import Slide3 from "@/assets/gsapSlider/slide3.jpg";
-import Slide4 from "@/assets/gsapSlider/slide4.jpg";
-import Slide5 from "@/assets/gsapSlider/slide5.jpg";
+import Slide1 from "@/assets/gsapSlider/slide1.avif";
+import Slide2 from "@/assets/gsapSlider/slide2.avif";
+import Slide3 from "@/assets/gsapSlider/slide3.avif";
+import Slide4 from "@/assets/gsapSlider/slide4.avif";
+import Slide5 from "@/assets/gsapSlider/slide5.avif";
 
 const images = [Slide1, Slide2, Slide3, Slide4, Slide5];
 const totalSlides = images.length - 1;
@@ -17,6 +17,7 @@ export default function GsapSlider() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const titleRefs = useRef([]);
     const imgTopContainerRef = useRef(null);
+    const firstLoad = useRef(true);
 
     const updateActiveSlide = (index) => {
         titleRefs.current.forEach((el, i) => {
@@ -30,12 +31,20 @@ export default function GsapSlider() {
         });
     };
 
+    const preloadImage = (imgSrc) => {
+        return new Promise((resolve) => {
+            const img = new Image();
+            img.src = imgSrc;
+            img.onload = resolve;
+        });
+    };
+
     const updateImages = (imgNumber) => {
         const imgSrc = images[imgNumber];
         const imgTop = document.createElement("img");
         imgTop.src = imgSrc.src;
         imgTop.style.position = "absolute";
-
+        imgTop.setAttribute("fetchpriority", "high");
         const imgTopContainer = imgTopContainerRef.current;
         imgTopContainer.appendChild(imgTop);
 
@@ -71,7 +80,7 @@ export default function GsapSlider() {
         }
     };
 
-    const handleSlider = () => {
+    const handleSlider = async () => {
         setCurrentIndex((prevIndex) => {
             const newIndex = prevIndex < totalSlides ? prevIndex + 1 : 0;
 
@@ -88,29 +97,53 @@ export default function GsapSlider() {
 
             return newIndex;
         });
+
+        // Preload the next image
+        const nextIndex = (currentIndex + 1) % images.length;
+        await preloadImage(images[nextIndex].src);
+
+        if (firstLoad.current) {
+            firstLoad.current = false;
+        }
     };
 
     useEffect(() => {
         const interval = setInterval(handleSlider, 5000);
         updateImages(0);
         updateActiveSlide(0);
+
+        // Preload the first image
+        preloadImage(images[0].src).then(() => {
+            firstLoad.current = false;
+        });
+
         return () => clearInterval(interval);
     }, []);
+
     return (
         <div className={classes.slider}>
             <div className={`${classes.slideTitles} slideTitles`}>
-                {["Neo Forge Towers", "Arcadian Complex", "Shadowline Spire", "Echo Nexus Habitat", "Cascade Enclave"].map((title, index) => (
+                {[
+                    "Neo Forge Towers",
+                    "Arcadian Complex",
+                    "Shadowline Spire",
+                    "Echo Nexus Habitat",
+                    "Cascade Enclave",
+                ].map((title, index) => (
                     <div
                         className={`${classes.title} title`}
                         key={index}
                         ref={(el) => (titleRefs.current[index] = el)}
                     >
-                        <h1 style={{color: "white"}}>{title}</h1>
+                        <h1 style={{ color: "white" }}>{title}</h1>
                     </div>
                 ))}
             </div>
             <div className={classes.slideImages}>
-                <div className={`${classes.imgTop} imgTop`} ref={imgTopContainerRef}></div>
+                <div
+                    className={`${classes.imgTop} imgTop`}
+                    ref={imgTopContainerRef}
+                ></div>
             </div>
         </div>
     );
