@@ -1,10 +1,9 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import { Great_Vibes } from "next/font/google";
 import pangaiaMedium from "@/pangaiaMedium";
-
 import styles from "@/components/css/textSlider.module.css";
 import Button from "@/components/Button";
 
@@ -37,20 +36,59 @@ const slides = [
 export default function TextSlider() {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [prevImageIndex, setPrevImageIndex] = useState(null);
+    const [isVisible, setIsVisible] = useState(true);
+    const sliderRef = useRef(null);
 
     useEffect(() => {
-        const interval = setInterval(() => {
-            setPrevImageIndex(currentImageIndex);
-            setCurrentImageIndex((prevIndex) =>
-                prevIndex < slides.length - 1 ? prevIndex + 1 : 0
-            );
-        }, 5000);
+        let interval;
 
-        return () => clearInterval(interval);
-    }, [currentImageIndex]);
+        const startSlider = () => {
+            interval = setInterval(() => {
+                setPrevImageIndex(currentImageIndex);
+                setCurrentImageIndex((prevIndex) =>
+                    prevIndex < slides.length - 1 ? prevIndex + 1 : 0
+                );
+            }, 5000);
+        };
+
+        const stopSlider = () => {
+            clearInterval(interval);
+        };
+
+        const handleVisibilityChange = () => {
+            if (document.hidden || !isVisible) {
+                stopSlider();
+            } else {
+                startSlider();
+            }
+        };
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    setIsVisible(entry.isIntersecting);
+                });
+            },
+            { threshold: 0.1 }
+        );
+
+        observer.observe(sliderRef.current);
+
+        document.addEventListener("visibilitychange", handleVisibilityChange);
+
+        if (isVisible) {
+            startSlider();
+        }
+
+        return () => {
+            stopSlider();
+            document.removeEventListener("visibilitychange", handleVisibilityChange);
+            observer.disconnect();
+        };
+    }, [isVisible, currentImageIndex]);
 
     return (
-        <div className={styles.slideshow}>
+        <div className={styles.slideshow} ref={sliderRef}>
             <div className={styles.sliderBody}>
                 {slides.map((slide, index) => (
                     <React.Fragment key={index}>

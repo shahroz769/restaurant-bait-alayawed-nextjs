@@ -15,7 +15,10 @@ const totalSlides = images.length - 1;
 
 export default function GsapSlider() {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [isVisible, setIsVisible] = useState(true);
     const imgTopContainerRef = useRef(null);
+    const sliderRef = useRef(null);
+
     const updateImages = (imgNumber) => {
         const imgSrc = images[imgNumber];
         const imgTop = document.createElement("img");
@@ -66,12 +69,54 @@ export default function GsapSlider() {
     };
 
     useEffect(() => {
-        const interval = setInterval(handleSlider, 5000);
+        let interval;
+
+        const startSlider = () => {
+            interval = setInterval(handleSlider, 5000);
+        };
+
+        const stopSlider = () => {
+            clearInterval(interval);
+        };
+
+        const handleVisibilityChange = () => {
+            if (document.hidden || !isVisible) {
+                stopSlider();
+            } else {
+                startSlider();
+            }
+        };
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    setIsVisible(entry.isIntersecting);
+                });
+            },
+            { threshold: 0.1 }
+        );
+
+        observer.observe(sliderRef.current);
+
+        document.addEventListener("visibilitychange", handleVisibilityChange);
+
+        if (isVisible) {
+            startSlider();
+        }
+
+        return () => {
+            stopSlider();
+            document.removeEventListener("visibilitychange", handleVisibilityChange);
+            observer.disconnect();
+        };
+    }, [isVisible]);
+
+    useEffect(() => {
         updateImages(0);
-        return () => clearInterval(interval);
     }, []);
+
     return (
-        <div className={classes.slider}>
+        <div className={classes.slider} ref={sliderRef}>
             <div className={classes.slideImages}>
                 <div
                     className={`${classes.imgTop} imgTop`}
