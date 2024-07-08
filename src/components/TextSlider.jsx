@@ -1,14 +1,10 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { Great_Vibes } from "next/font/google";
 
-import burgerImg from "@/assets/slider01.jpg";
-import curryImg from "@/assets/slider02.jpg";
-import dumplingsImg from "@/assets/slider03.jpg";
-import styles from "@/components/css/imageSlider.module.css";
+import styles from "@/components/css/textSlider.module.css";
 import Button from "@/components/Button";
 
 const greatVibes = Great_Vibes({
@@ -18,29 +14,26 @@ const greatVibes = Great_Vibes({
 
 const slides = [
     {
-        image: burgerImg,
         alt: "A delicious, juicy burger",
-        title: "FAST FRESH FLAVORFUL",
-        link: "/restaurant-menu/juicy-burger",
+        title: "FAST FRESH FLAVORFUL DISHES",
+        link: "/",
         header: "It's Quick & Amusing!",
     },
     {
-        image: curryImg,
         alt: "A delicious, spicy curry",
-        title: "EXOTIC SPICE BLISS",
-        link: "/restaurant-menu/spicy-curry",
+        title: "EXOTIC SPICE BLISS FOOD",
+        link: "/",
         header: "A Symphony of Flavors!",
     },
     {
-        image: dumplingsImg,
         alt: "Steamed dumplings",
-        title: "STEAMY & SAVORY",
-        link: "/restaurant-menu/steamed-dumplings",
+        title: "STEAMY & SAVORY ARABIC DELIGHTS",
+        link: "/",
         header: "Little Bundles of Joy!",
     },
 ];
 
-export default function ImageSlideshow() {
+export default function TextSlider() {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [prevImageIndex, setPrevImageIndex] = useState(null);
 
@@ -48,7 +41,7 @@ export default function ImageSlideshow() {
         const interval = setInterval(() => {
             setPrevImageIndex(currentImageIndex);
             setCurrentImageIndex((prevIndex) =>
-                prevIndex < slides.length - 1 ? prevIndex + 1 : 0,
+                prevIndex < slides.length - 1 ? prevIndex + 1 : 0
             );
         }, 5000);
 
@@ -57,23 +50,6 @@ export default function ImageSlideshow() {
 
     return (
         <div className={styles.slideshow}>
-            <div className={styles.imageSlider}>
-                {slides.map((slide, index) => (
-                    <Image
-                        key={index}
-                        src={slide.image}
-                        className={
-                            index === currentImageIndex
-                                ? styles.active
-                                : index === prevImageIndex
-                                ? styles.prevActive
-                                : ""
-                        }
-                        alt={slide.alt}
-                        priority
-                    />
-                ))}
-            </div>
             <div className={styles.sliderBody}>
                 {slides.map((slide, index) => (
                     <React.Fragment key={index}>

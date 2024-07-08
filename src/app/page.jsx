@@ -8,11 +8,13 @@ import ChooseUs from "@/components/ChooseUs/ChooseUs";
 import AboutOurFood from "@/components/AboutOurFood/AboutOurFood";
 import TestimonialContainer from "@/components/Testimonial/TestimonialContainer";
 import GsapSlider from "@/components/GsapSlider";
+import TextSlider from "@/components/TextSlider";
 
 export default function Home() {
     return (
         <>
             <GsapSlider />
+            <TextSlider />
             <DishContainer />
             <FoodBannerConainer />
             <TodayDeal />

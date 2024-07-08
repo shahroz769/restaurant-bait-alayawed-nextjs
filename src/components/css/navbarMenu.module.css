@@ -8,10 +8,12 @@
     width: max-content;
     position: absolute;
     top: 100%;
-    padding: 48px 28px 18px 28px;
+    padding: 12px 16px;
     display: flex;
     flex-direction: column;
     gap: 16px;
+    border-radius: 8px;
+    margin-top: 8px;
 }
 
 .navMenu {
@@ -22,8 +24,8 @@
 }
 
 .navMenuLink {
-    color: var(--clr-white);
-    font-size: 20px;
+    color: var(--clr-black);
+    font-size: 18px;
     font-weight: 500;
 }
 
