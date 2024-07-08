@@ -20,26 +20,36 @@ export default function RootLayout({ children }) {
                     rel="preload"
                     href="https://res.cloudinary.com/doigzeztt/image/upload/f_avif,q_25/v1720434391/baitalayawed/mezhghedsydnjkmcgxjd.jpg"
                     as="image"
+                    type="image/avif"
+                    fetchpriority="high"
                 />
                 <link
                     rel="preload"
                     href="https://res.cloudinary.com/doigzeztt/image/upload/f_avif,q_25/v1720434391/baitalayawed/xpipiicr0w4pnjjdlu9q.jpg"
                     as="image"
+                    type="image/avif"
+                    fetchpriority="high"
                 />
                 <link
                     rel="preload"
                     href="https://res.cloudinary.com/doigzeztt/image/upload/f_avif,q_25/v1720434391/baitalayawed/umwr9kby5vf5lrlbo9fc.jpg"
                     as="image"
+                    type="image/avif"
+                    fetchpriority="high"
                 />
                 <link
                     rel="preload"
                     href="https://res.cloudinary.com/doigzeztt/image/upload/f_avif,q_25/v1720434391/baitalayawed/hu8mn2zroaxchron2g3p.jpg"
                     as="image"
+                    type="image/avif"
+                    fetchpriority="high"
                 />
                 <link
                     rel="preload"
                     href="https://res.cloudinary.com/doigzeztt/image/upload/f_avif,q_25/v1720434390/baitalayawed/dqomyzmsxzgvr8erfbbs.jpg"
                     as="image"
+                    type="image/avif"
+                    fetchpriority="high"
                 />
             </head>
             <body className={zxcoolXiaowei.className}>
