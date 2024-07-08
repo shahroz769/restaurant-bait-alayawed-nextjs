@@ -12,7 +12,7 @@
     --clr-golden: #bf814b;
     --clr-light-golden: #bf814bcc;
     --clr-red: #d93644;
-    --clr-green: #00813D;
+    --clr-green: #00813d;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -33,12 +33,16 @@
     margin: 0;
 }
 
+html,
+body {
+    overflow-x: hidden;
+}
+
 body {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 72px;
     background-color: var(--clr-white);
     margin-bottom: 80px;
 }

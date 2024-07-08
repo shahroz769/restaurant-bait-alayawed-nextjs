@@ -1,15 +1,14 @@
 .navHeader {
-    background-color: var(--clr-white);
-    /* outline: 1px solid indianred; */
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 100;
 }
 
 .nav {
-    /* outline: 2px solid royalblue; */
-    padding: 20px 30px;
+    position: absolute;
+    padding: 10px 15px;
     max-width: var(--max-width);
     width: 100%;
     display: flex;
@@ -18,12 +17,11 @@
 }
 
 .navLogo {
-    width: 180px;
+    width: 140px;
     height: auto;
 }
 
 .navLogo .Img {
-    filter: invert(1);
     width: 100%;
     height: 100%;
 }
@@ -35,8 +33,8 @@
 }
 
 .navLinks {
-    color: var(--clr-black);
-    font-size: 18px;
+    color: var(--clr-white);
+    font-size: 20px;
     font-weight: 500;
 }
 
