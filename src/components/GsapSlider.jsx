@@ -24,7 +24,7 @@ export default function GsapSlider() {
         const imgTop = document.createElement("img");
         imgTop.src = imgSrc;
         imgTop.style.position = "absolute";
-        imgTop.setAttribute("fetchpriority", "high");
+        imgTop.setAttribute("fetchPriority", "high");
         const imgTopContainer = imgTopContainerRef.current;
         imgTopContainer.appendChild(imgTop);
 
@@ -34,8 +34,8 @@ export default function GsapSlider() {
             imgTop,
             {
                 clipPath: "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)",
-                transform: "scale(2)",
-                x: -1000,
+                transform: "scale(1.5)",
+                x: 400,
             },
             {
                 clipPath: "polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%)",

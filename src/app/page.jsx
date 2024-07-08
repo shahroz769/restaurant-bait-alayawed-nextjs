@@ -9,6 +9,9 @@ import AboutOurFood from "@/components/AboutOurFood/AboutOurFood";
 import TestimonialContainer from "@/components/Testimonial/TestimonialContainer";
 import GsapSlider from "@/components/GsapSlider";
 import TextSlider from "@/components/TextSlider";
+import FooterDelivery from "@/components/FooterDelivery/FooterDelivery";
+import FooterContact from "@/components/FooterContact/FooterContact";
+import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
     return (
@@ -24,6 +27,9 @@ export default function Home() {
             <ChooseUs />
             <AboutOurFood />
             <TestimonialContainer />
+            <FooterDelivery />
+            <FooterContact />
+            <Footer />
         </>
     );
 }

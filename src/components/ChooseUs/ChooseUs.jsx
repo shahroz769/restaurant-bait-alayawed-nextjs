@@ -42,8 +42,8 @@ export default function ChooseUs() {
                 width={0}
                 height={0}
             />
-            {features.map((feature) => (
-                <Features feature={feature} />
+            {features.map((feature, index) => (
+                <Features feature={feature} key={index} />
             ))}
         </div>
     );

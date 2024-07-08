@@ -1,0 +1,60 @@
+/* components/Footer.module.css */
+.footer {
+    width: 100%;
+    max-width: var(--max-width);
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    flex: 1;
+    /* padding: 10px; */
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.inquiry {
+    font-weight: 500;
+}
+
+.description,
+.inquiry,
+.email {
+    margin: 12px 0;
+}
+
+.email {
+    color: var(--clr-green);
+    font-weight: 600;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.heading {
+    font-size: 18px;
+    margin-bottom: calc(var(--padding) * 1.5);
+}
+
+.hoursHead {
+    margin-top: calc(var(--padding) * 1.5);
+}
+
+.links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+}
+
+.links a {
+    text-decoration: none;
+    color: var(--clr-black);
+}
+
+.links a:hover {
+    text-decoration: underline;
+}

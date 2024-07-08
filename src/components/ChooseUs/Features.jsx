@@ -1,9 +1,9 @@
 import classes from "@/components/ChooseUs/features.module.css";
 import Image from "next/image";
 
-export default function Features({ feature }) {
+export default function Features({ feature, index }) {
     return (
-        <div className={classes.feature}>
+        <div key={index} className={classes.feature}>
             <div className={classes.featureImg}>
                 <Image
                     src={feature.img.src}

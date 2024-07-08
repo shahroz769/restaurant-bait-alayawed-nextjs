@@ -105,7 +105,6 @@ export default function TestimonialContainer() {
                         <Image
                             src={testimonial.img.src}
                             alt={testimonial.img.alt}
-                            layout="responsive"
                             width={75}
                             height={75}
                         />

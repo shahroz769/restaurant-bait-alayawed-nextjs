@@ -9,7 +9,7 @@ export default function Button({ children, backgroundColor, color }) {
                 backgroundColor: backgroundColor
                     ? backgroundColor
                     : "var(--clr-black)",
-                color: color ? color : "var(--clr-white)",
+                color: color ? color : "var(--clr-full-white)",
             }}
         >
             {children || "Click Here"}
