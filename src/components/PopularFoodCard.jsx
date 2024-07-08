@@ -2,8 +2,7 @@ import classes from "@/components/css/popularFoodCard.module.css";
 import Image from "next/image";
 import barlowCondensed from "@/barlowCondened";
 import Burger from "@/assets/popularFoodCard/burger.png";
-
-//
+import pangaiaMedium from "@/pangaiaMedium";
 
 export default function PopularFoodCard() {
     return (
@@ -19,7 +18,7 @@ export default function PopularFoodCard() {
                 />
             </div>
             <div className={classes.popularFoodCardBody}>
-                <h1>Burger Thief</h1>
+                <h1 className={pangaiaMedium.className}>Burger Thief</h1>
                 <p className={barlowCondensed.className}>
                     Spicy Beef Burger with American cheese...
                 </p>

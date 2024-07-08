@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { Great_Vibes } from "next/font/google";
+import pangaiaMedium from "@/pangaiaMedium";
 
 import styles from "@/components/css/textSlider.module.css";
 import Button from "@/components/Button";
@@ -15,19 +16,19 @@ const greatVibes = Great_Vibes({
 const slides = [
     {
         alt: "A delicious, juicy burger",
-        title: "FAST FRESH FLAVORFUL DISHES",
+        title: "Fast Fresh Flavorful Dishes Delights",
         link: "/",
         header: "It's Quick & Amusing!",
     },
     {
         alt: "A delicious, spicy curry",
-        title: "EXOTIC SPICE BLISS FOOD",
+        title: "Exotic Spice Bliss Fast Food Delights",
         link: "/",
         header: "A Symphony of Flavors!",
     },
     {
         alt: "Steamed dumplings",
-        title: "STEAMY & SAVORY ARABIC DELIGHTS",
+        title: "Steamy & Savory Arabic Delights",
         link: "/",
         header: "Little Bundles of Joy!",
     },
@@ -61,9 +62,9 @@ export default function TextSlider() {
                             {slide.header}
                         </h3>
                         <h1
-                            className={
+                            className={`${pangaiaMedium.className} ${
                                 index === currentImageIndex ? styles.active : ""
-                            }
+                            }`}
                         >
                             {slide.title}
                         </h1>

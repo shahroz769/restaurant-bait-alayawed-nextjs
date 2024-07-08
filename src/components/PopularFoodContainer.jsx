@@ -8,7 +8,7 @@ export default function PopularFoodContainer() {
         <div className={classes.popularFoodContainer}>
             <SectionHeader
                 sub="CRISPY, EVERY BITE TASTE"
-                main="POPULAR FOOD ITEMS"
+                main="Popular Food Items"
             />
             <PopularFoodCardsWrapper />
             <Button backgroundColor="var(--clr-green)">VIEW MORE</Button>
