@@ -5,11 +5,11 @@ import { gsap } from "gsap";
 import classes from "@/components/css/gsapSlider.module.css";
 
 const images = [
-    "https://res.cloudinary.com/doigzeztt/image/upload/f_avif,q_50/v1720434391/baitalayawed/mezhghedsydnjkmcgxjd.jpg",
-    "https://res.cloudinary.com/doigzeztt/image/upload/f_avif,q_50/v1720434391/baitalayawed/xpipiicr0w4pnjjdlu9q.jpg",
-    "https://res.cloudinary.com/doigzeztt/image/upload/f_avif,q_35/v1720434391/baitalayawed/umwr9kby5vf5lrlbo9fc.jpg",
-    "https://res.cloudinary.com/doigzeztt/image/upload/f_avif,q_35/v1720434391/baitalayawed/hu8mn2zroaxchron2g3p.jpg",
-    "https://res.cloudinary.com/doigzeztt/image/upload/f_avif,q_50/v1720434390/baitalayawed/dqomyzmsxzgvr8erfbbs.jpg",
+    "https://res.cloudinary.com/doigzeztt/image/upload/f_avif,q_25/v1720434391/baitalayawed/mezhghedsydnjkmcgxjd.jpg",
+    "https://res.cloudinary.com/doigzeztt/image/upload/f_avif,q_25/v1720434391/baitalayawed/xpipiicr0w4pnjjdlu9q.jpg",
+    "https://res.cloudinary.com/doigzeztt/image/upload/f_avif,q_25/v1720434391/baitalayawed/umwr9kby5vf5lrlbo9fc.jpg",
+    "https://res.cloudinary.com/doigzeztt/image/upload/f_avif,q_25/v1720434391/baitalayawed/hu8mn2zroaxchron2g3p.jpg",
+    "https://res.cloudinary.com/doigzeztt/image/upload/f_avif,q_25/v1720434390/baitalayawed/dqomyzmsxzgvr8erfbbs.jpg",
 ];
 const totalSlides = images.length - 1;
 
