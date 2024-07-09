@@ -1,0 +1,17 @@
+.footerBottomContainer {
+    margin-top: var(--gap);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--clr-green);
+    padding-block: calc(var(--padding) * 1.5);
+}
+
+.footerBottom {
+    color: var(--clr-white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--max-width);
+    width: 100%;
+}

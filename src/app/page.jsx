@@ -12,6 +12,7 @@ import TextSlider from "@/components/TextSlider";
 import FooterDelivery from "@/components/FooterDelivery/FooterDelivery";
 import FooterContact from "@/components/FooterContact/FooterContact";
 import Footer from "@/components/Footer/Footer";
+import FooterBottom from "@/components/FooterBottom/FooterBottom";
 
 export default function Home() {
     return (
@@ -30,6 +31,7 @@ export default function Home() {
             <FooterDelivery />
             <FooterContact />
             <Footer />
+            <FooterBottom />
         </>
     );
 }
