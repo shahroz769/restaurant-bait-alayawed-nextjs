@@ -20,7 +20,7 @@ export default function index({
                 {
                     width: "250px",
                     height: "250px",
-                    duration: 0.5,
+                    duration: 0.4,
                     ease: "power3.in",
                 },
                 "enter"
@@ -30,7 +30,7 @@ export default function index({
                 {
                     width: "0%",
                     height: "0%",
-                    duration: 0.3,
+                    duration: 0.25,
                 },
                 "exit"
             );

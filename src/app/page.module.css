@@ -21,10 +21,9 @@
     z-index: 2;
     position: relative;
     color: black;
-    transition: color 0.5s linear;
+    transition: color 0.4s linear;
 }
 
-/* Add this to change the text color on hover */
 .button:hover p {
     color: white;
 }
