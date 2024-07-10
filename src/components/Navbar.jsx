@@ -3,8 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import barlowCondensed from "@/barlowCondened";
 import AlAyawedLogo from "@/assets/Logo.png";
-import Button from "@/components/Button";
 import NavbarMenu from "@/components/NavbarMenu";
+import AnimatedButton from "@/components/AnimatedButton/AnimatedButton";
+import classes from "@/app/page.module.css";
 
 export default function Navbar() {
     return (
@@ -37,10 +38,13 @@ export default function Navbar() {
                         BLOG
                     </Link>
                 </div>
-                <div>
-                    <Link href="/contact-us">
-                        <Button>CONTACT US</Button>
-                    </Link>
+                <div style={{position:"relative"}}>
+                    <AnimatedButton
+                        backgroundColor={"#e68d27"}
+                        className={classes.button}
+                    >
+                        <p>CONTACT US</p>
+                    </AnimatedButton>
                 </div>
             </nav>
         </header>

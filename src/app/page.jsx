@@ -14,6 +14,7 @@ import FooterContact from "@/components/FooterContact/FooterContact";
 import Footer from "@/components/Footer/Footer";
 import FooterBottom from "@/components/FooterBottom/FooterBottom";
 
+
 export default function Home() {
     return (
         <>

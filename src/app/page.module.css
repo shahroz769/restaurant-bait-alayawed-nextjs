@@ -1,0 +1,21 @@
+.button {
+    background-color: #ffffff;
+    color: white;
+    border-radius: 8px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+.button p {
+    margin: 0px;
+    font-size: 18px;
+    font-weight: 500;
+    z-index: 2;
+    position: relative;
+    color: black;
+    transition: color 0.25s linear;
+}
