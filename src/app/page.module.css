@@ -10,6 +10,10 @@
     padding: 10px 20px;
 }
 
+.button:hover {
+    color: white !important;
+}
+
 .button p {
     margin: 0px;
     font-size: 18px;
@@ -17,5 +21,10 @@
     z-index: 2;
     position: relative;
     color: black;
-    transition: color 0.25s linear;
+    transition: color 0.5s linear;
+}
+
+/* Add this to change the text color on hover */
+.button:hover p {
+    color: white;
 }
