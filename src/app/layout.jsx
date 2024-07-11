@@ -1,6 +1,7 @@
 import "./globals.css";
 import { ZCOOL_XiaoWei } from "next/font/google";
 import Navbar from "@/components/Navbar";
+import SlideTabsExample from "@/components/AnimatedNavbar/SlideTabsExample";
 
 const zxcoolXiaowei = ZCOOL_XiaoWei({
     weight: "400",
@@ -53,7 +54,8 @@ export default function RootLayout({ children }) {
                 />
             </head>
             <body className={zxcoolXiaowei.className}>
-                <Navbar />
+                {/* <Navbar /> */}
+                <SlideTabsExample />
                 {children}
             </body>
         </html>

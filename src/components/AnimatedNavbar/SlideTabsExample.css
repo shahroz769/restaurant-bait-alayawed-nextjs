@@ -1,0 +1,39 @@
+.slide-tabs-container {
+    padding-top: 16px;
+    position: absolute;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.animated-button {
+    background-color: #ffffff;
+    color: white;
+    border-radius: 8px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 16px 20px;
+    border-radius: 9999px;
+}
+
+.animated-button:hover {
+    color: white !important;
+}
+
+.animated-button p {
+    margin: 0px;
+    font-size: 1rem;
+    font-weight: 500;
+    z-index: 2;
+    position: relative;
+    color: black;
+    transition: color 0.4s linear;
+}
+
+.animated-button:hover p {
+    color: white;
+}

@@ -18,8 +18,8 @@ export default function index({
             .to(
                 circle.current,
                 {
-                    width: "250px",
-                    height: "250px",
+                    width: "350px",
+                    height: "350px",
                     duration: 0.4,
                     ease: "power3.in",
                 },

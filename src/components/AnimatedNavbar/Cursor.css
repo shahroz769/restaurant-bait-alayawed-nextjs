@@ -1,0 +1,16 @@
+.cursor {
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    height: 28px;
+    border-radius: 9999px;
+    background-color: rgba(229, 229, 229, 0.25);
+    backdrop-filter: blur(25px);
+
+}
+
+@media (min-width: 768px) {
+    .cursor {
+        height: 48px;
+    }
+}

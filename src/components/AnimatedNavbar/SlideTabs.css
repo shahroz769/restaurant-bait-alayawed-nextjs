@@ -1,0 +1,7 @@
+.slide-tabs {
+    position: relative;
+    display: flex;
+    border-radius: 9999px;
+    padding: 4px 0;
+    width: fit-content;
+}
